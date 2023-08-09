@@ -1,0 +1,12 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: infrastructure-kubernetes-dashboard
+  namespace: flux-system
+spec:
+  interval: 60m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-sync # helm chart name for flux-sync
+  path: ./infrastructure/kubernetes-dashboard
+  prune: true
