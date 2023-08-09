@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: infrastructure-cdi-cr
+  namespace: kubevirt
+spec:
+  interval: 60m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/kubevirt/cdi/custom-resource
+  prune: true
+  dependsOn:
+    - name: infrastructure-cdi-operator
