@@ -7,6 +7,6 @@ spec:
   interval: 60m0s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: flux-sync
   path: ./infrastructure/kubevirt/core/operators
   prune: true
