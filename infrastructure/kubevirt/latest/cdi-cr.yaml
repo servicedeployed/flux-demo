@@ -8,6 +8,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-sync
+    namespace: flux-system
   path: ./infrastructure/kubevirt/cdi/custom-resource
   prune: true
   dependsOn:

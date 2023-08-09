@@ -7,6 +7,7 @@ spec:
   interval: 60m0s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: flux-sync
+    namespace: flux-system
   path: ./infrastructure/kubevirt/cdi/operators
   prune: true
