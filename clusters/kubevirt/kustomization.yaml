@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
   - infrastructure-base.yaml
   - infrastructure-kubernetes-dashboard.yaml
-  # - infrastructure-gitops-dashboard.yaml
   - infrastructure-kubevirt.yaml
