@@ -13,3 +13,11 @@ spec:
         name: gitops
         namespace: gitops
   interval: 60m0s
+  values:
+    rbac:
+      viewSecretsResourceNames: ["cluster-user-auth", "oidc-auth", "gitops-test-user"]
+    adminUser:
+      create: true
+      createClusterRole: true
+      createSecret: true
+      username: gitops-test-user
